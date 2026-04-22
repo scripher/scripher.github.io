@@ -6,7 +6,18 @@
     <title>模拟搜索框</title>
   </head>
   <body>
-    <input type = "text" placeholder = "Input something here...">
-    <button>Search</button>
+    <input id = "vinput" type = "text" placeholder = "Input something here...">
+    <button id = "search_btn">Search</button>
+
+    <script>
+      const ipt = document.getElementById("vinput");
+      const btn = document.getElementById("search_btn");
+      function web_search(web_name, search_txt) {
+        if (web_name === "baidu") {
+          window.open("https://www.baidu.com/s?wd=" + search_txt);
+        }
+      }
+      btn.addEventListener("click", web_search("baidu", ipt.value));
+    </script>
   </body>
 </html>
