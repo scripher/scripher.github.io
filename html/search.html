@@ -17,7 +17,9 @@
           window.open("https://www.baidu.com/s?wd=" + search_txt);
         }
       }
-      btn.addEventListener("click", web_search("baidu", ipt.value));
+      btn.addEventListener("click", function() {
+        web_search("baidu", ipt.value));
+      }
     </script>
   </body>
 </html>
