@@ -9,6 +9,7 @@
     <input id = "vinput" type = "text" placeholder = "Input something here...">
     <button id = "baidu_btn">Baidu</button>
     <button id = "google_btn">Google</button>
+    <button id = "bili_btn">BiliBili</button>
     <script>
       const ipt = document.getElementById("vinput");
       const baidu_btn = document.getElementById("baidu_btn");
@@ -16,8 +17,10 @@
       function web_search(web_name, search_txt) {
         if (web_name === "baidu") {
           window.location.href = "https://www.baidu.com/s?wd=" + search_txt;
-        } else if (web_name == "google") {
+        } else if (web_name === "google") {
           window.location.href = "https://www.google.com/search?q=" + search_txt;
+        } else if (web_name === "bilibili") {
+          window.location.href = "https://search.bilibili.com/all?keyword=" + search_txt;
         }
       }
       
@@ -26,6 +29,9 @@
       });
       google_btn.addEventListener("click", function() {
         web_search("google", ipt.value);
+      });
+      bili_btn.addEventListener("click", function() {
+        web_search("bilibili", ipt.value);
       });
     </script>
   </body>
