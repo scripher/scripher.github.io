@@ -7,18 +7,25 @@
   </head>
   <body>
     <input id = "vinput" type = "text" placeholder = "Input something here...">
-    <button id = "search_btn">Search</button>
-
+    <button id = "baidu_btn">Baidu</button>
+    <button id = "google_btn">Google</button>
     <script>
       const ipt = document.getElementById("vinput");
-      const btn = document.getElementById("search_btn");
+      const baidu_btn = document.getElementById("baidu_btn");
+      const google_btn = document.getElementById("google_btn");
       function web_search(web_name, search_txt) {
         if (web_name === "baidu") {
-          window.open("https://www.baidu.com/s?wd=" + search_txt);
+          window.location.href = "https://www.baidu.com/s?wd=" + search_txt;
+        } else if (web_name == "google") {
+          window.location.href = "https://www.google.com/search?q=" + search_txt;
         }
       }
-      btn.addEventListener("click", function() {
+      
+      baidu_btn.addEventListener("click", function() {
         web_search("baidu", ipt.value);
+      });
+      google_btn.addEventListener("click", function() {
+        web_search("google", ipt.value);
       });
     </script>
   </body>
