@@ -17,5 +17,33 @@
     <img width = "100px" referrerpolicy = "no-referrer" src = "https://pica.zhimg.com/v2-d563d8d48b533bb5b38b377d1e64a128_1440w.jpg">
     <!-- CSDN草稿 -->
     <img width = "100px" referrerpolicy = "no-referrer" src = "https://i-blog.csdnimg.cn/direct/dda8865fd60649a5805daa8c7b44e590.jpeg">
+
+    <p>
+      这是三个按钮：
+      <button id = "like">点赞</button>
+      <button id = "coin">投币</button>
+      <button id = "fav">收藏</button>
+    </p>
+    <p id = "val_data"></p>
+
+  <script>
+    let vlike = 0, vcoin = 0, vfav = 0;
+    let p_content = document.getElementById("val_data");
+    let like_btn = document.getElementById("like");
+    let coin_btn = document.getElementById("coin");
+    let fav_btn = document.getElementById("fav");
+    like_btn.addEventListener("click", function() {
+      vlike++;
+      p_content.innerHTML = "点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}";
+    });
+    coin_btn.addEventListener("click", function() {
+      vcoin++;
+      p_content.innerHTML = "点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}";
+    });
+    fav_btn.addEventListener("click", function() {
+      vfav++;
+      p_content.innerHTML = "点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}";
+    });
+  </script>
   </body>
 </html>
