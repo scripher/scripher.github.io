@@ -11,6 +11,8 @@
     <button id = "google_btn">Google</button>
     <button id = "bing_btn">Bing</button>
     <button id = "bili_btn">Bilibili</button>
+    <button id = "zhihu_btn">Zhihu</button>
+    
     <script>
       const ipt = document.getElementById("vinput");
       const baidu_btn = document.getElementById("baidu_btn");
@@ -24,6 +26,8 @@
           window.location.href = "https://www.bing.com/search?q=" + search_txt;
         } else if (web_name === "bilibili") {
           window.location.href = "https://search.bilibili.com/all?keyword=" + search_txt;
+        } else if (web_name == "zhihu") {
+          window.location.href = "https://www.zhihu.com/search?type=content&q=" + search_txt;
         }
       }
       
@@ -38,6 +42,9 @@
       });
       bili_btn.addEventListener("click", function() {
         web_search("bilibili", ipt.value);
+      });
+      zhihu_btn.addEventListener("click", function() {
+        web_search("zhihu", ipt.value);
       });
     </script>
   </body>
