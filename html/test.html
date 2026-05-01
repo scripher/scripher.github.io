@@ -24,7 +24,7 @@
       <button id = "coin">投币</button>
       <button id = "fav">收藏</button>
     </p>
-    <p id = "val_data"></p>
+    <p id = "val_data">点赞: 0, 投币: 0, 收藏: 0</p>
 
   <script>
     let vlike = 0, vcoin = 0, vfav = 0;
@@ -34,15 +34,15 @@
     let fav_btn = document.getElementById("fav");
     like_btn.addEventListener("click", function() {
       vlike++;
-      p_content.innerHTML = "点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}";
+      p_content.innerHTML = `点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}`;
     });
     coin_btn.addEventListener("click", function() {
       vcoin++;
-      p_content.innerHTML = "点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}";
+      p_content.innerHTML = `点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}`;
     });
     fav_btn.addEventListener("click", function() {
       vfav++;
-      p_content.innerHTML = "点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}";
+      p_content.innerHTML = `点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}`;
     });
   </script>
   </body>
