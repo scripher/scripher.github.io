@@ -4,6 +4,15 @@
   <head>
     <meta charset = "UTF-8">
     <title>Many Tests</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #000000;
+        border: 2px solid #000000;
+        margin: 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- 百度图片 -->
@@ -12,7 +21,7 @@
     <img width = "100px" referrerpolicy = "no-referrer" src = "https://i0.hdslb.com/bfs/article/e3cdb2b3ab299a6de8ec1cd6b09c25e12024069799.jpg">
     <img width = "100px" referrerpolicy = "no-referrer" src = "https://i0.hdslb.com/bfs/new_dyn/a55a2722afd0bf71faf96f88312f040997182109.png">
     <!-- 小红书 -->
-    <img width = "100px" referrerpolicy = "no-referrer" src = "https://sns-webpic-qc.xhscdn.com/202604240124/e22fe79680b783de5d33f4910d0e98f2/notes_pre_post/1040g3k031v9q6pprii005n5iu8m49e89kopg5f0!nd_dft_wlteh_webp_3">
+    <img width = "100px" referrerpolicy = "no-referrer" src = "https://sns-webpic-qc.xhscdn.com/202605020138/6268bbbfc672156e82047273c2ea4dad/1040g2sg31qdcsvql7ok05pdag2j20sao03ug6ng!nd_dft_wlteh_webp_3">
     <!-- 知乎公开回答 -->
     <img width = "100px" referrerpolicy = "no-referrer" src = "https://pica.zhimg.com/v2-d563d8d48b533bb5b38b377d1e64a128_1440w.jpg">
     <!-- CSDN草稿 -->
@@ -26,7 +35,14 @@
     </p>
     <p id = "val_data">点赞: 0, 投币: 0, 收藏: 0</p>
 
+    <div id = "color_box" class = "box"></div>
+    <p>R: <input id = "input_r" type = "number" value = "0"></p>
+    <p>G: <input id = "input_g" type = "number" value = "0"></p>
+    <p>B: <input id = "input_b" type = "number" value = "0"></p>
+    <button id = "color_btn">Change Color</button>
+    
   <script>
+    // 三连部分
     let vlike = 0, vcoin = 0, vfav = 0;
     let p_content = document.getElementById("val_data");
     let like_btn = document.getElementById("like");
@@ -43,6 +59,15 @@
     fav_btn.addEventListener("click", function() {
       vfav++;
       p_content.innerHTML = `点赞: ${vlike}, 投币: ${vcoin}, 收藏: ${vfav}`;
+    });
+
+    // 改颜色部分
+    let vbox = document.getElementById("color_box");
+    let vr = document.getElementById("input_r");
+    let vg = document.getElementById("input_g");
+    let vb = document.getElementById("input_b");
+    document.getElementById("color_btn").addEventListener("click", function() {
+      vbox.style.backgroundColor = rgb(vr.valueAsNumber, vg.valueAsNumber, vb.valueAsNumber)
     });
   </script>
   </body>
