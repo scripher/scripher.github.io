@@ -12,6 +12,11 @@
         border: 2px solid #000000;
         margin: 20px;
       }
+
+      .box_group {
+        display: flex;
+        flex-wrap: nowrap;
+      }
     </style>
   </head>
   <body>
@@ -40,6 +45,12 @@
     <p>G: <input id = "input_g" type = "number" value = "0"></p>
     <p>B: <input id = "input_b" type = "number" value = "0"></p>
     <button id = "color_btn">Change Color</button>
+
+    <div class = "box_group">
+      <div id = "box_1"></div>
+      <div id = "box_2"></div>
+      <div id = "box_3"></div>
+    </div>
     
   <script>
     // 三连部分
@@ -68,6 +79,39 @@
     let vb = document.getElementById("input_b");
     document.getElementById("color_btn").addEventListener("click", function() {
       vbox.style.backgroundColor = `rgb(${vr.valueAsNumber}, ${vg.valueAsNumber}, ${vb.valueAsNumber})`
+    });
+
+    // 开关灯
+    let light1 = false, light2 = false, light3 = false;
+    function change_state(s1, s2, s3, close_color = "rgb(0, 0, 0)", open_color = "rgb(255, 255, 255)") {
+      if (s1) {
+        document.getElementById("box_1").style.backgroundColor = open_color;
+      } else {
+        document.getElementById("box_1").style.backgroundColor = close_color;
+      }
+      if (s2) {
+        document.getElementById("box_2").style.backgroundColor = open_color;
+      } else {
+        document.getElementById("box_2").style.backgroundColor = close_color;
+      }
+      if (s3) {
+        document.getElementById("box_3").style.backgroundColor = open_color;
+      } else {
+        document.getElementById("box_3").style.backgroundColor = close_color;
+      }
+    }
+    
+    document.getElementById("box_1").addEventListener("click", function() {
+      light1 = !light1;
+      change_state(ligh1, light2, light3);
+    });
+    document.getElementById("box_1").addEventListener("click", function() {
+      light2 = !light2;
+      change_state(ligh1, light2, light3);
+    });
+    document.getElementById("box_1").addEventListener("click", function() {
+      light3 = !light3;
+      change_state(ligh1, light2, light3);
     });
   </script>
   </body>
