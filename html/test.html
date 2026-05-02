@@ -137,7 +137,7 @@
     document.getElementById("ord2per_btn").addEventListener("click", function() {
       let arr = ord2per(9, document.getElementById("ord2per_num").valueAsNumber);
       document.getElementById("per_text").innerHTML = "排列: " + arr.join(", ");
-      document.getelementById("nine_boxes").innerHTML = `
+      document.getElementById("nine_boxes").innerHTML = `
         <div class = "num_box">${arr[0]}</div>
         <div class = "num_box">${arr[1]}</div>
         <div class = "num_box">${arr[2]}</div>
