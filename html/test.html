@@ -58,9 +58,10 @@
       <div id = "box_2" class = "box"></div>
       <div id = "box_3" class = "box"></div>
     </div>
-    <input id = "ord2per_num" type = "number">
-    <p id = "per_text"></p>
+    
+    <p id = "per_text">排列: </p>
     <div id = "nine_boxes" class = "box_group"></div>
+    <input id = "ord2per_num" type = "number">
     <button id = "ord2per_btn">Get Permutation</button>
     
     
@@ -137,15 +138,15 @@
       let arr = ord2per(9, document.getElementById("ord2per_num").valueAsNumber);
       document.getElementById("per_text").innerHTML = "排列: " + arr.join(", ");
       document.getelementById("nine_boxes").innerHTML = `
-        <div id = "nine_box_1" class = "num_box">${arr[0]}</div>
-        <div id = "nine_box_2" class = "num_box">${arr[1]}</div>
-        <div id = "nine_box_3" class = "num_box">${arr[2]}</div>
-        <div id = "nine_box_4" class = "num_box">${arr[3]}</div>
-        <div id = "nine_box_5" class = "num_box">${arr[4]}</div>
-        <div id = "nine_box_6" class = "num_box">${arr[5]}</div>
-        <div id = "nine_box_7" class = "num_box">${arr[6]}</div>
-        <div id = "nine_box_8" class = "num_box">${arr[7]}</div>
-        <div id = "nine_box_9" class = "num_box">${arr[8]}</div>
+        <div class = "num_box">${arr[0]}</div>
+        <div class = "num_box">${arr[1]}</div>
+        <div class = "num_box">${arr[2]}</div>
+        <div class = "num_box">${arr[3]}</div>
+        <div class = "num_box">${arr[4]}</div>
+        <div class = "num_box">${arr[5]}</div>
+        <div class = "num_box">${arr[6]}</div>
+        <div class = "num_box">${arr[7]}</div>
+        <div class = "num_box">${arr[8]}</div>
       `;
     });
 
