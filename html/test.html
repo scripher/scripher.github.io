@@ -51,7 +51,10 @@
       <div id = "box_2" class = "box"></div>
       <div id = "box_3" class = "box"></div>
     </div>
-    
+    <input id = "ord2per_num" type = "number">
+    <button id = "ord2per_btn">Get Permutation</button>
+
+  <script src = "https://scripher.github.io/js/cantor_expansion.js"></script>
   <script>
     // 三连部分
     let vlike = 0, vcoin = 0, vfav = 0;
@@ -116,6 +119,11 @@
       light2 = !light2;
       light3 = !light3;
       change_state(light1, light2, light3);
+    });
+
+    // 康托展开
+    document.getElementById("ord2per_btn").addEventListener("click", function() {
+      console.log(ord2per(9, document.getElementById("ord2per_num").valueAsNumber));
     });
   </script>
   </body>
