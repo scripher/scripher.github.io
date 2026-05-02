@@ -47,9 +47,9 @@
     <button id = "color_btn">Change Color</button>
 
     <div class = "box_group">
-      <div id = "box_1"></div>
-      <div id = "box_2"></div>
-      <div id = "box_3"></div>
+      <div id = "box_1" class = "box"></div>
+      <div id = "box_2" class = "box"></div>
+      <div id = "box_3" class = "box"></div>
     </div>
     
   <script>
@@ -103,13 +103,17 @@
     
     document.getElementById("box_1").addEventListener("click", function() {
       light1 = !light1;
-      change_state(ligh1, light2, light3);
-    });
-    document.getElementById("box_1").addEventListener("click", function() {
       light2 = !light2;
       change_state(ligh1, light2, light3);
     });
     document.getElementById("box_1").addEventListener("click", function() {
+      light1 = !light1;
+      light2 = !light2;
+      light3 = !light3;
+      change_state(ligh1, light2, light3);
+    });
+    document.getElementById("box_1").addEventListener("click", function() {
+      light2 = !light2;
       light3 = !light3;
       change_state(ligh1, light2, light3);
     });
