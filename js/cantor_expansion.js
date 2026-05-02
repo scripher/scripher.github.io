@@ -25,6 +25,13 @@ function ord2per(n, ord) {
     num[i-1] = i;
   }
 
+  // 处理异常
+  if (ord > fac[n-1]) {
+    return ord2per(n, fac[n-1]);
+  } else if (ord < 0) {
+    return ord2per(n, 0);
+  }
+
   for (i = n-1; i > 0; i--) {
     temp = ord % fac[i-1];
     a = (ord - temp) / fac[i-1];
