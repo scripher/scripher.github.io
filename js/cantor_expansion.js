@@ -28,7 +28,7 @@ function ord2per(n, ord) {
   for (i = n-1; i > 0; i--) {
     temp = ord % fac[i-1];
     a = (ord - temp) / fac[i-1];
-    ans[n-1-i] = num.splice(index, a);
+    ans[n-1-i] = num.splice(a, 1)[0];
     ord = temp;
   }
   ans[n-1] = num[0];
