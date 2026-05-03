@@ -149,8 +149,8 @@
     });
 
     // 康托展开与九个盒子
-    document.getElementById("ord2per_btn").addEventListener("click", function change_boxes() {
-      let arr = ord2per(9, document.getElementById("ord2per_num").valueAsNumber);
+    function change_boxes(ord) {
+      let arr = ord2per(9, ord);
       document.getElementById("per_text").innerHTML = "排列: " + arr.join(", ");
       document.getElementById("nine_boxes").innerHTML = `
         <div class = "num_box">${arr[0]}</div>
@@ -163,11 +163,15 @@
         <div class = "num_box">${arr[7]}</div>
         <div class = "num_box">${arr[8]}</div>
       `;
+    }
+    document.getElementById("ord2per_btn").addEventListener("click", function() {
+      let ord = document.getElementById("ord2per_num").valueAsNumber;
+      change_boxes(ord);
     });
     document.getElementById("rnd_per").addEventListener("click", function() {
       let rnd_number = Math.floor(362880 * Math.random());
       document.getElementById("ord2per_num").value = rnd_number;
-      change_boxes();
+      change_boxes(rnd_number);
     });
   </script>
   </body>
