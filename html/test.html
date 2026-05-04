@@ -35,6 +35,12 @@
         display: flex;
         flex-wrap: nowrap;
       }
+
+      .move_btn:hover {
+        width: 50px;
+        height: 50px;
+        transform: translateY(-5px);
+      }
     </style>
   </head>
   <body>
@@ -83,6 +89,8 @@
     <input id = "ord2per_num" type = "number">
     <button id = "ord2per_btn">Get Permutation</button>
     <button id = "rnd_per">Random Permutation</button>
+
+    <button class = "move_btn">I can Move</button>
   
   <script src = "https://scripher.github.io/js/cantor_expansion.js"></script>
   <script>
