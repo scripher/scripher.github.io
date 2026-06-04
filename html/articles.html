@@ -6,14 +6,17 @@
     <title>Article Links</title>
     <style>
       #top_bar {
-        background-color: #00CC99;
+        background-color: #22dd99;
         color: #FFFFFF;
         font-size: 40px;
+        padding: 16px;
+        margin: 0px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div id = "top_bar">←</div>
+    <div id = "top_bar">Home</div>
     <h2>arXiv</h2>
     <p>[0612069] <a href = "https://arxiv.org/abs/math/0612069">Hamilton-Perelman's Proof of the Poincaré Conjecture and the Geometrization Conjecture</a></p>
     <p>[1303.3288] <a href = "https://arxiv.org/abs/1303.3288">Quantum Periods for 3-Dimensional Fano Manifolds</a></p>
@@ -21,5 +24,11 @@
     <p>[2405.16979] <a href = "https://arxiv.org/abs/2405.16979">Revisiting Gamma conjecture I: counterexamples and modifications</a></p>
     <p>[2409.03922] <a href = "https://arxiv.org/abs/2409.03922">On the exponential type conjecture</a></p>
     <p>[2509.05711] <a href = "https://arxiv.org/abs/2509.05711">An improved lower bound for star-shaped Kakeya sets</a></p>
-  </body>
+    <script>
+        let vhome = document.getElementById("top_bar");
+        vhome.addEventListener("click", function() {
+            window.location.href = "https://scripher.github.io";
+        })
+    </script>
+</body>
 </html>
