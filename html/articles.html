@@ -4,25 +4,7 @@
   <head>
     <meta charset = "UTF-8">
     <title>Article Links</title>
-    <style>
-      #home_btn {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        height: 80px;
-        width: 80px;
-        line-height: 80px;
-        font-size: 40px;
-        text-align: center;
-        background-color: #22dd99;
-        color: #FFFFFF;
-      }
-
-      #home_btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 3px 5px #333333;
-      }
-    </style>
+    <link rel = "stylesheet" type = "text/css" href = "https://scripher.github.io/css/home_button.css">
   </head>
   <body>
     <button id = "home_btn">🏠</button>
@@ -33,11 +15,6 @@
     <p>[2405.16979] <a href = "https://arxiv.org/abs/2405.16979">Revisiting Gamma conjecture I: counterexamples and modifications</a></p>
     <p>[2409.03922] <a href = "https://arxiv.org/abs/2409.03922">On the exponential type conjecture</a></p>
     <p>[2509.05711] <a href = "https://arxiv.org/abs/2509.05711">An improved lower bound for star-shaped Kakeya sets</a></p>
-    <script>
-        const vhome = document.getElementById("home_btn");
-        vhome.addEventListener("click", function() {
-            window.location.href = "https://scripher.github.io";
-        })
-    </script>
+    <script type = "module" src = "https://scripher.github.io/js/home_button.js"></script>
 </body>
 </html>
