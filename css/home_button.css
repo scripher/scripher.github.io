@@ -1,1 +1,22 @@
+#home_btn {
+  border-radius: 12px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  height: 80px;
+  width: 80px;
+  line-height: 75px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #22dd99;
+  color: #FFFFFF;
+}
 
+#home_btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 5px #333333;
+}
+
+#home_btn:active {
+  filter: brightness(0.9);
+}
