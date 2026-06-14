@@ -26,7 +26,7 @@ const boxes = Array.from({length: 9}, (_, index) => {
   temp.id = `the_box_${index + 1}`;
   temp.className = "the_box";
   temp.addEventListener("click", function() {
-    vcode += String(index);
+    vcode += String(index + 1);
     jump_check();
   });
   return temp;
