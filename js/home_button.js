@@ -1,6 +1,13 @@
 let is_dark = 0;
 let is_long_press = 0;
 let timer = 0;
+let vcode = "";
+
+function jump_check() {
+  if (vcode = "456") {
+    window.href = "https://scripher.github.io/html/blue_prince";
+  }
+}
 
 // Home键的构造
 const home = document.createElement("button");
@@ -16,8 +23,12 @@ box_container.className = "nine_box_center";
 
 const boxes = Array.from({length: 9}, (_, index) => {
   let temp = document.createElement("div");
-  temp.id = `the_box_${index}`;
+  temp.id = `the_box_${index + 1}`;
   temp.className = "the_box";
+  temp.addEventListener("click", function() {
+    vcode += String(index);
+    jump_check();
+  });
   return temp;
 });
 
@@ -32,6 +43,7 @@ function add_dark() {
 
 function remove_dark() {
   document.body.removeChild(dark_layer);
+  vcode = "";
   is_dark = 0;
 }
 
