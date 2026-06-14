@@ -45,7 +45,7 @@ home.addEventListener("mousedown", function() {
     } else {
       add_dark();
     }
-  }, 2000);
+  }, 1500);
 });
 
 home.addEventListener("mouseup", function() {
