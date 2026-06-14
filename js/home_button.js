@@ -37,6 +37,7 @@ function remove_dark() {
 
 // 长按的事件
 home.addEventListener("mousedown", function() {
+  clearTimeout(timer);
   timer = setTimeout(function() {
     is_long_press = 1;
     if (is_dark === 1) {
