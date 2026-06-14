@@ -5,7 +5,7 @@ let vcode = "";
 
 function jump_check() {
   if (vcode === "456") {
-    window.href = "https://scripher.github.io/html/blue_prince";
+    window.location.href = "https://scripher.github.io/html/blue_prince";
   }
 }
 
