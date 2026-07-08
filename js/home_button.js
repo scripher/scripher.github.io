@@ -6,6 +6,8 @@ let vcode = "";
 function jump_check() {
   if (vcode === "456") {
     window.location.href = "https://scripher.github.io/html/blue_prince";
+  } else if (vcode === "937") {
+    window.location.href = "https://scripher.github.io/html/sysu_math_admission.html"
   }
 }
 
