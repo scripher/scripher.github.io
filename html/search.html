@@ -11,12 +11,13 @@
   </head>
   <body>
     <input id = "vinput" type = "text" style = "width: 1000px;" placeholder = "Input something here...">
-    <button id = "baidu_btn">baidu</button>
+    <button id = "baidu_btn">百度</button>
     <button id = "google_btn">google</button>
     <button id = "bing_btn">bing</button>
     <button id = "bili_btn">bilibili</button>
-    <button id = "zhihu_btn">zhihu</button>
+    <button id = "zhihu_btn">知乎</button>
     <button id = "imslp_btn">imslp</button>
+    <button id = "xhs_btn">小红书</button>
 
     <script>
       const ipt = document.getElementById("vinput");
@@ -35,6 +36,8 @@
           window.location.href = "https://www.zhihu.com/search?type=content&q=" + search_txt;
         } else if (web_name == "imslp") {
           window.location.href = "https://www.google.com/search?q=site:imslp.org+" + search_txt;
+        } else if (web_name == "xhs") {
+          window.location.href = "https://www.xiaohongshu.com/search_result?keyword=" + search_txt;
         }
       }
       
@@ -55,6 +58,9 @@
       });
       imslp_btn.addEventListener("click", function() {
         web_search("imslp", ipt.value);
+      });
+      xhs_btn.addEventListener("click", function() {
+        web_search("xhs", ipt.value);
       });
     </script>
   </body>
